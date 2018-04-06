@@ -5,10 +5,10 @@
   "main": "index.ts",
   "repository": "git@github.com:4th-law/modality_template.git",
   "author": "Hazmatius <alexb@4th-law.com>",
-  "dependencies": {
-  },
+  "license": "GPL-3.0-only",
+  "dependencies": {},
   "devDependencies": {
-    "@4th-law/typings": "^0.4.1",
+    "@4th-law/typings-public": "^0.1.1",
     "@types/chai": "^4.1.0",
     "@types/config": "^0.0.33",
     "@types/mocha": "^2.2.46",
