@@ -1,4 +1,4 @@
-import * as Typings from "@4th-law/typings"
+import * as Typings from "@4th-law/typings-public"
 
 export default class ModalityTemplate extends Typings.Modality {
   protected _baseType: string
@@ -24,6 +24,7 @@ export default class ModalityTemplate extends Typings.Modality {
     this._userCommand = {timestamp: 0, userCommand: [0], } as NModalities.IControlCommand
   }
 
+  // the translate function is used to convert control inputs into actuator commands
   public translate(controlCommand: NModalities.IControlCommand): NModalities.IActuatorCommand[] {
     const value = {timestamp: 0, routerID: "0", actuatorInput: [0], }
     const returnValue = [value] as NModalities.IActuatorCommand[]

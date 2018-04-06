@@ -48,10 +48,10 @@ jobs:
           name: Generate Coverage Report
           command: |
             ./node_modules/.bin/nyc report --reporter=lcov
-      - run:
-          name: Report Coverage to Codacy
-          command: |
-            cat ./.coverage/lcov.info | ./node_modules/.bin/codacy-coverage --language typescript ;
+      # - run:
+      #     name: Report Coverage to Codacy
+      #     command: |
+      #       cat ./.coverage/lcov.info | ./node_modules/.bin/codacy-coverage --language typescript ;
       - store_test_results:
           path: ./testData
       - store_artifacts:
