@@ -1,6 +1,6 @@
 {
   "name": "@4th-law/modality_template",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A modality template",
   "main": "index.ts",
   "repository": "git@github.com:4th-law/modality_template.git",
