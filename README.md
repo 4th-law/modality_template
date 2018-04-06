@@ -4,9 +4,9 @@ This is a modality template, it's meant to provide a framework for developing yo
 
 Fleshing out this template should leave you with a node module that can be imported into the 4th Law framework. The scripts you need to do this have already been included in the package.json
 
-The default export (and thus all functions that need to be accessible through the profile) should be included in the index.ts file. Any tests you want to run for validation should be inside of the profile.test.ts file, inside of the test folder.
+The default export (and thus all functions that need to be accessible through the modality) should be included in the index.ts file. Any tests you want to run for validation should be inside of the modality.test.ts file, inside of the test folder.
 
-Any non-javascript/typescript code that you need to run your profile should be included in the project folder, you will need to establish the correct linking between this code and the ts/js code that defines the module.
+Any non-javascript/typescript code that you need to run your modality should be included in the project folder, you will need to establish the correct linking between this code and the ts/js code that defines the module.
 
 Modalities are more complex than profiles, they have the following variables:
 protected \_baseType: a string variable which holds the type of modality being used, such as "DRONE" or "CAR"
@@ -20,7 +20,7 @@ protected \_error: an NModalities.IError variable representing the error of meas
 protected \_userCommand: an NModalities.IControlCommand variable that holds command values for an actuator
 private \_localWeights: an array of numbers, used as local parameters for the modality, usefull if your modality is adaptive and thus will start to differ from the base modality.
 
-Note that NModalities.IState, NModalities.IError, and NModalities.IControlCommand can all be found in the 4th-law typings module. Each of these is simply an array of numbers and a timestamp.
+Note that NModalities.IState, NModalities.IError, NModalities.IControlCommand, and NModalities.IActuatorCommand can all be found in the 4th-law PublicTypings module. Each of these is simply an array of numbers and a timestamp.
 
 Modalities have several functions: info(), get localWeights(), set localWeights(), get state(), set state(), get error(), set error(), and translate(). translate() is the only function you need to worry about, the others have already been defined (though their uses will be described below).
 
